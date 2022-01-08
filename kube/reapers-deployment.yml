@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: reapers
+  name: reapers
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: reapers
+  template:
+    metadata:
+      labels:
+        service: reapers
+    spec:
+      containers:
+      - image: zquestz/reapers:latest
+        imagePullPolicy: Always
+        name: reapers
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "8Mi"
+      restartPolicy: Always

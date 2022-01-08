@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: reapers-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - www.reapers.cash
+    - reapers.cash
+    secretName: reapers-tls
+  defaultBackend:
+    service:
+      name: reapers
+      port:
+        number: 802
+  rules:
+  - host: reapers.cash
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: reapers
+            port:
+              number: 802
+  - host: www.reapers.cash
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: reapers
+            port:
+              number: 802
