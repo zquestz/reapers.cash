@@ -205,7 +205,7 @@ function App() {
         >
           <div class="social">
             <a href="https://github.com/zquestz/reapers.cash" target="_blank"><img src="/github-alt-brands.svg" /></a>
-            {/* <a href="#" target="_blank"><img src="/telegram-plane-brands.svg" /></a> */}
+            <a href="https://t.me/ReapersNFT" target="_blank"><img src="/telegram-plane-brands.svg" /></a>
             <a href="https://twitter.com/ReapersNFT" target="_blank"><img src="/twitter-brands.svg" /></a>
           </div>
         </s.Container>
