@@ -108,6 +108,7 @@ function App() {
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
     SHOW_BACKGROUND: false,
+    LAUNCH_DATE: "",
   });
 
   const claimNFTs = () => {
@@ -300,6 +301,7 @@ function App() {
                   </s.Container>
                 ) : (
                   <>
+                    {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
                     <s.TextDescription
                       style={{
                         textAlign: "center",
@@ -308,7 +310,9 @@ function App() {
                     >
                       {feedback}
                     </s.TextDescription>
+                    ) : null }
                     <s.SpacerMedium />
+                    {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledRoundButton
                         style={{ lineHeight: 0.4 }}
@@ -340,7 +344,9 @@ function App() {
                         +
                       </StyledRoundButton>
                     </s.Container>
+                    ) : null }
                     <s.SpacerSmall />
+                    {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
@@ -353,6 +359,16 @@ function App() {
                         {claimingNft ? "BUSY" : "BUY"}
                       </StyledButton>
                     </s.Container>
+                    ) : (
+                      <s.TextDescription
+                      style={{
+                        textAlign: "center",
+                        color: "var(--accent-text)",
+                      }}
+                    >
+                      Summoning begins {new Date(CONFIG.LAUNCH_DATE).toUTCString()}.
+                    </s.TextDescription>
+                    ) }
                   </>
                 )}
               </>
