@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x48973dbAC0d46B939CD12A7250eFBA965e8a8cf2",
+  "SCAN_LINK": "https://www.smartscan.cash/address/0x48973dbAC0d46B939CD12A7250eFBA965e8a8cf2",
+  "NETWORK": {
+    "NAME": "SmartBCH",
+    "SYMBOL": "BCH",
+    "ID": 10000
+  },
+  "NFT_NAME": "Reapers",
+  "SYMBOL": "REAP",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 50000000000000000,
+  "DISPLAY_COST": 0.05,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Oasis",
+  "MARKETPLACE_LINK": "https://oasis.cash/collection/0x48973dbAC0d46B939CD12A7250eFBA965e8a8cf2",
+  "SHOW_BACKGROUND": false
+}
