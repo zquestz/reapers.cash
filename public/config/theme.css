@@ -6,3 +6,9 @@
   --accent: #505050;
   --accent-text: #ffffff;
 }
+
+.social img {
+  width: 32px;
+  margin: 0 10px;
+  display: inline-block;
+}

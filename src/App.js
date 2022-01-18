@@ -194,6 +194,21 @@ function App() {
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall />
+        <s.Container
+          jc={"center"}
+          ai={"center"}
+          style={{
+            margin: "0",
+            padding: "0",
+            color: "#efefef",
+          }}
+        >
+          <div class="social">
+            <a href="https://github.com/zquestz/reapers.cash" target="_blank"><img src="/github-alt-brands.svg" /></a>
+            {/* <a href="#" target="_blank"><img src="/telegram-plane-brands.svg" /></a> */}
+            <a href="https://twitter.com/ReapersNFT" target="_blank"><img src="/twitter-brands.svg" /></a>
+          </div>
+        </s.Container>
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.webp"} />
