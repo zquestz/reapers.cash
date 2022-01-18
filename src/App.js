@@ -4,9 +4,12 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import Countdown from 'react-countdown';
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
+
+const Completionist = () => "";
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -203,7 +206,7 @@ function App() {
             color: "#efefef",
           }}
         >
-          <div class="social">
+          <div className="social">
             <a href="https://github.com/zquestz/reapers.cash" target="_blank"><img src="/github-alt-brands.svg" /></a>
             <a href="https://t.me/ReapersNFT" target="_blank"><img src="/telegram-plane-brands.svg" /></a>
             <a href="https://twitter.com/ReapersNFT" target="_blank"><img src="/twitter-brands.svg" /></a>
@@ -280,7 +283,7 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription
                       style={{
@@ -317,73 +320,80 @@ function App() {
                 ) : (
                   <>
                     {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
-                      {feedback}
-                    </s.TextDescription>
-                    ) : null }
-                    <s.SpacerMedium />
-                    {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledRoundButton
-                        style={{ lineHeight: 0.4 }}
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </StyledRoundButton>
-                      <s.SpacerMedium />
                       <s.TextDescription
                         style={{
                           textAlign: "center",
                           color: "var(--accent-text)",
                         }}
                       >
-                        {mintAmount}
+                        {feedback}
                       </s.TextDescription>
-                      <s.SpacerMedium />
-                      <StyledRoundButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </StyledRoundButton>
-                    </s.Container>
-                    ) : null }
+                    ) : null}
+                    <s.SpacerMedium />
+                    {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
+                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                        <StyledRoundButton
+                          style={{ lineHeight: 0.4 }}
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            decrementMintAmount();
+                          }}
+                        >
+                          -
+                        </StyledRoundButton>
+                        <s.SpacerMedium />
+                        <s.TextDescription
+                          style={{
+                            textAlign: "center",
+                            color: "var(--accent-text)",
+                          }}
+                        >
+                          {mintAmount}
+                        </s.TextDescription>
+                        <s.SpacerMedium />
+                        <StyledRoundButton
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            incrementMintAmount();
+                          }}
+                        >
+                          +
+                        </StyledRoundButton>
+                      </s.Container>
+                    ) : null}
                     <s.SpacerSmall />
                     {new Date() > new Date(CONFIG.LAUNCH_DATE) ? (
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs();
-                          getData();
-                        }}
-                      >
-                        {claimingNft ? "BUSY" : "BUY"}
-                      </StyledButton>
-                    </s.Container>
+                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                        <StyledButton
+                          disabled={claimingNft ? 1 : 0}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            claimNFTs();
+                            getData();
+                          }}
+                        >
+                          {claimingNft ? "BUSY" : "BUY"}
+                        </StyledButton>
+                      </s.Container>
                     ) : (
                       <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
-                      Summoning begins {new Date(CONFIG.LAUNCH_DATE).toUTCString()}.
-                    </s.TextDescription>
-                    ) }
+                        style={{
+                          textAlign: "center",
+                          color: "var(--accent-text)",
+                        }}
+                      >
+                        Summoning begins {new Date(CONFIG.LAUNCH_DATE).toUTCString()}.
+                      </s.TextDescription>
+                    )}
+                    <div className="countdown">
+                      <Countdown 
+                        date={new Date(CONFIG.LAUNCH_DATE)}
+                      >
+                        <Completionist />
+                      </Countdown>
+                    </div>
                   </>
                 )}
               </>

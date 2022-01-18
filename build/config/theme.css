@@ -12,3 +12,9 @@
   margin: 0 10px;
   display: inline-block;
 }
+
+.countdown {
+  margin-top: 1em;
+  color: white;
+  font-size: 2em;
+}
