@@ -240,6 +240,7 @@ function App() {
               <img
                 style={{
                   marginTop: "1em",
+                  maxWidth: "100%",
                 }}
                src="/sinister.png"
                alt="The Sinister 3" />
