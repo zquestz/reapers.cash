@@ -229,6 +229,35 @@ function App() {
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--primary-text)",
+                paddingBottom: "1em",
+                maxWidth: "450px",
+              }}
+            >
+              <img
+                style={{
+                  marginTop: "1em",
+                }}
+               src="/sinister.png"
+               alt="The Sinister 3" />
+              <p
+                style={{
+                  marginTop: "1em",
+                }}
+              >Through death comes life, created from the heart of an <StyledLink target={"_blank"} href="https://instagram.com/chu_mash">
+                Indigenous Activist
+              </StyledLink> and some <StyledLink target={"_blank"} href="https://greyh.at">
+                terminal junkie
+              </StyledLink> out there in the metaverse, we introduce the Reapers! Coming for the soul of the financial system.</p>
+              <p
+                style={{
+                  marginTop: "1em",
+                }}
+              >Chu, our artist, comes from a Native Reservation in California. His goal is to bring quality NFT art to the SmartBCH community and transition to being a digital artist in the crypto economy!</p>
+            </s.TextDescription>
             <s.TextTitle
               style={{
                 textAlign: "center",
