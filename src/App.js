@@ -242,22 +242,31 @@ function App() {
                   marginTop: "1em",
                   maxWidth: "100%",
                 }}
-               src="/sinister.png"
-               alt="The Sinister 3" />
+                src="/sinister.png"
+                alt="The Sinister 3" />
               <p
                 style={{
                   marginTop: "1em",
                 }}
               >Through death comes life, created from the heart of an <StyledLink target={"_blank"} href="https://instagram.com/chu_mash">
-                Indigenous Activist
-              </StyledLink> and some <StyledLink target={"_blank"} href="https://greyh.at">
-                terminal junkie
-              </StyledLink> out there in the metaverse, we introduce the Reapers! Coming for the soul of the financial system.</p>
+                  indigenous activist
+                </StyledLink> and a <StyledLink target={"_blank"} href="https://greyh.at">
+                  terminal junkie
+                </StyledLink> out there in the metaverse, we introduce the Reapers! Coming for the soul of the financial system.</p>
               <p
                 style={{
                   marginTop: "1em",
                 }}
-              >Chu, our artist, comes from a Native Reservation in California. His goal is to bring quality NFT art to the SmartBCH community and transition to being a digital artist in the crypto economy!</p>
+              >Chu, our artist, comes from a Native Reservation in California. His goal is to bring quality NFT art to the SmartBCH community and transition to being a full time digital artist in the crypto economy!</p>
+              <p
+                style={{
+                  marginTop: "1em",
+                }}
+              >
+                To read more about our vision/roadmap, check out our <StyledLink target={"_blank"} href="https://read.cash/@Chu/the-reapers-are-ready-to-summon-7d65bd97">
+                  release announcement
+                </StyledLink>.
+              </p>
             </s.TextDescription>
             <s.TextTitle
               style={{
@@ -418,7 +427,7 @@ function App() {
                       </s.TextDescription>
                     )}
                     <div className="countdown">
-                      <Countdown 
+                      <Countdown
                         date={new Date(CONFIG.LAUNCH_DATE)}
                       >
                         <Completionist />
