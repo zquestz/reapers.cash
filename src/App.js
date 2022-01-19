@@ -324,6 +324,7 @@ function App() {
                 {blockchain.account === "" ||
                   blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
+
                     <s.TextDescription
                       style={{
                         textAlign: "center",
@@ -426,17 +427,17 @@ function App() {
                         Summoning begins {new Date(CONFIG.LAUNCH_DATE).toUTCString()}.
                       </s.TextDescription>
                     )}
-                    <div className="countdown">
-                      <Countdown
-                        date={new Date(CONFIG.LAUNCH_DATE)}
-                      >
-                        <Completionist />
-                      </Countdown>
-                    </div>
                   </>
                 )}
               </>
             )}
+            <div className="countdown">
+              <Countdown
+                date={new Date(CONFIG.LAUNCH_DATE)}
+              >
+                <Completionist />
+              </Countdown>
+            </div>
             <s.SpacerMedium />
           </s.Container>
           <s.SpacerLarge />
