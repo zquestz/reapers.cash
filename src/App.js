@@ -304,7 +304,9 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerSmall />
                 <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-                  {CONFIG.MARKETPLACE}
+                  <img style={{
+                    width: "192px",
+                  }} src="/oasis_logo.svg" alt="Oasis" />
                 </StyledLink>
               </>
             ) : (
