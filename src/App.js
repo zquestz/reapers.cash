@@ -154,7 +154,7 @@ function App() {
               }}>You have no Reapers in this wallet.</p>
               <p style={{
                 margin: "1em"
-              }}>Visit on Oasis to get a Reaper!</p>
+              }}>Visit Oasis to get a Reaper!</p>
               <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}><img style={{
                 width: "192px",
               }} src="/oasis_logo.svg" alt="Oasis" /></StyledLink>
