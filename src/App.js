@@ -168,8 +168,8 @@ function App() {
     let fullData = []
 
     for (let i = 0; i < receipt.length; i++) {
-      let idx = parseInt(receipt[i], 10)
-      let metadata = CONFIG.METADATA[idx]
+      let idx = parseInt(receipt[i], 10) - 1;
+      let metadata = CONFIG.METADATA[idx];
 
       fullData.push({
         id: idx,
