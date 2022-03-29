@@ -178,6 +178,8 @@ function App() {
       })
     }
 
+    setFeedback("Total Reapers: " + receipt.length);
+
     return fullData.map((item) =>
       <div key={item.id} style={{
         margin: "6px",
