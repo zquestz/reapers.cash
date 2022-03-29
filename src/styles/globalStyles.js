@@ -7,7 +7,6 @@ export const Screen = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
@@ -63,7 +62,7 @@ export const TextSubTitle = styled.p`
   line-height: 1.6;
 `;
 
-export const TextDescription = styled.p`
+export const TextDescription = styled.div`
   color: var(--primary-text);
   font-size: 16px;
   line-height: 1.6;

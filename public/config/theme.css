@@ -7,6 +7,10 @@
   --accent-text: #ffffff;
 }
 
+html {
+  background-color: #222222;
+}
+
 .social img {
   width: 32px;
   margin: 0 10px;
