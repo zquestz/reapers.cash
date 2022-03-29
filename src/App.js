@@ -280,12 +280,12 @@ function App() {
                   e.preventDefault();
                   showAbout();
                 }}
-                // onMouseEnter={(e) => {
-                //   e.target.style['background-image'] = "url('aboutH.png')";
-                // }}
-                // onMouseOut={(e) => {
-                //   e.target.style['background-image'] = "url('about.png')";
-                // }}
+              // onMouseEnter={(e) => {
+              //   e.target.style['background-image'] = "url('aboutH.png')";
+              // }}
+              // onMouseOut={(e) => {
+              //   e.target.style['background-image'] = "url('about.png')";
+              // }}
               > </StyledAbout>
               <>
                 {blockchain.account === "" ||
@@ -298,12 +298,12 @@ function App() {
                       dispatch(connect());
                       getData();
                     }}
-                    // onMouseEnter={(e) => {
-                    //   e.target.style['background-image'] = "url('walletH.png')";
-                    // }}
-                    // onMouseOut={(e) => {
-                    //   e.target.style['background-image'] = "url('wallet.png')";
-                    // }}
+                  // onMouseEnter={(e) => {
+                  //   e.target.style['background-image'] = "url('walletH.png')";
+                  // }}
+                  // onMouseOut={(e) => {
+                  //   e.target.style['background-image'] = "url('wallet.png')";
+                  // }}
                   > </StyledWallet>
                 ) : (
                   <StyledWallet
@@ -312,17 +312,30 @@ function App() {
                       showReapers();
                       getData();
                     }}
-                    // onMouseEnter={(e) => {
-                    //   e.target.style['background-image'] = "url('walletH.png')";
-                    // }}
-                    // onMouseOut={(e) => {
-                    //   e.target.style['background-image'] = "url('wallet.png')";
-                    // }}
+                  // onMouseEnter={(e) => {
+                  //   e.target.style['background-image'] = "url('walletH.png')";
+                  // }}
+                  // onMouseOut={(e) => {
+                  //   e.target.style['background-image'] = "url('wallet.png')";
+                  // }}
                   > </StyledWallet>
                 )}
               </>
             </s.Container>
-            {(feedback !== "") ? (
+            {blockchain.errorMsg !== "" && view === "reapers" ? (
+              <>
+                <s.TextDescription
+                  style={{
+                    textAlign: "center",
+                    color: "var(--accent-text)",
+                    marginTop: "1em",
+                  }}
+                >
+                  {blockchain.errorMsg}
+                </s.TextDescription>
+              </>
+            ) : null}
+            {(feedback !== "" && blockchain.errorMsg === "") ? (
               <>
                 <s.TextDescription
                   style={{
