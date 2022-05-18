@@ -174,6 +174,7 @@ function App() {
       fullData.push({
         id: idx,
         url: metadata.image,
+        resizedUrl: "https://resizer.greyh.at/150x/" + metadata.image,
         name: metadata.name.replace("Reapers Collection ", ""),
       })
     }
@@ -187,7 +188,7 @@ function App() {
         borderRadius: 8,
       }}><StyledLink target={"_blank"} href={item.url}>
           {item.url.includes(".png") ? (
-            <img alt={item.name} src={item.url} width="150px" height="150px" style={{
+            <img alt={item.name} src={item.resizedUrl} width="150px" height="150px" style={{
               borderTopRightRadius: 8,
               borderTopLeftRadius: 8,
             }} />) : (
