@@ -1,6 +1,6 @@
 # reapers.cash
 
-This is the repository for [reapers.cash](https://reapers.cash).
+This is the repository for [smartbch.reapers.cash](https://smartbch.reapers.cash).
 
 ## Usage
 

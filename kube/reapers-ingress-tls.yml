@@ -9,8 +9,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - www.reapers.cash
-    - reapers.cash
+    - smartbch.reapers.cash
     secretName: reapers-tls
   defaultBackend:
     service:
@@ -18,17 +17,7 @@ spec:
       port:
         number: 802
   rules:
-  - host: reapers.cash
-    http:
-      paths:
-      - path: /
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: reapers
-            port:
-              number: 802
-  - host: www.reapers.cash
+  - host: smartbch.reapers.cash
     http:
       paths:
       - path: /
